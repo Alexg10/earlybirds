@@ -1,0 +1,21 @@
+body {
+  background-color: yellow;
+}
+body .container {
+  width: 100%;
+  margin: 0 auto;
+  background-color: red;
+}
+body .slider_content {
+  overflow: hidden;
+}
+body .slider_content .item {
+  display: inline-block;
+  float: left;
+  width: 20%;
+}
+body .slider_content .item img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=main.css.map */
