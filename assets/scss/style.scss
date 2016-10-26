@@ -42,6 +42,13 @@
 
 body{
 	background-color:#272b30;
+	font-family: Arial, Helvetica, sans-serif;
+	.sliderName{
+		color: white;
+		font-size: 35px; 
+		text-transform: uppercase;
+		transition: all 0.5s ease;
+	}
 	.container{
 		display: flex;
 		flex-direction: column;
@@ -52,7 +59,6 @@ body{
 		justify-content: center;
 		align-items: center;
 	}
-
 	.slider_container{
 		overflow: hidden;
 		position: relative;
@@ -64,8 +70,7 @@ body{
 		transition: all 0.5s ease;
 		width: 100%;
 		&.hidden{
-			transform: translateY(-50px);
-			opacity:0;
+			transform: translateY(50px);
 		}
 		.slider_content{
 			position: relative;
@@ -85,7 +90,6 @@ body{
 					.movie_infos{
 						transform: translateY(0);
 						transition: transform 0.4s ease;
-
 					}
 				}
 				.movie_infos{
@@ -157,9 +161,12 @@ body{
 					width: 10px;
 					height: 10px;
 					transition: all 0.4s ease;
-
 				}
 			}
 		}
+	}
+	.hidden{
+		opacity:0;
+		transition: all 0.5s ease;
 	}
 }

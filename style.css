@@ -38,6 +38,13 @@
 
 body {
   background-color: #272b30;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body .sliderName {
+  color: white;
+  font-size: 35px;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
 }
 body .container {
   display: flex;
@@ -61,8 +68,7 @@ body .slider_container {
   width: 100%;
 }
 body .slider_container.hidden {
-  transform: translateY(-50px);
-  opacity: 0;
+  transform: translateY(50px);
 }
 body .slider_container .slider_content {
   position: relative;
@@ -151,6 +157,10 @@ body .slider_bullet ul li a {
   width: 10px;
   height: 10px;
   transition: all 0.4s ease;
+}
+body .hidden {
+  opacity: 0;
+  transition: all 0.5s ease;
 }
 
 /*# sourceMappingURL=style.css.map */

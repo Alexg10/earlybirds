@@ -2,7 +2,6 @@ $(document ).ready(function() {
 
     $.ajax({
         url: 'https://api.themoviedb.org/3/movie/upcoming?api_key=e082a5c50ed38ae74299db1d0eb822fe',
-        async: false,
         contentType: 'application/json',
         dataType: 'jsonp',
         success: displayMovie
@@ -31,7 +30,6 @@ $(document ).ready(function() {
 	       				<div class='resume'>"+resume+"</div>\
        				</div>\
        				</li>");
-
          	});
     	}
     	for (var i=0; i<5; i++){
@@ -40,7 +38,7 @@ $(document ).ready(function() {
 
         //REMOVE MAXIMUM AND MINIMUM
         $('.item').each(function(){
-            f= $(this).data('sort');
+            f = $(this).data('sort');
             if( isNaN(f)){
                 $(this).remove();
             }
@@ -70,9 +68,9 @@ $(document ).ready(function() {
 
     	function slideRight(){
             current_sort = $('.slider_content li:first-child').data('sort');
-            next=  current_sort+1;
+            next = current_sort+1;
 
-            if(current_sort ==numItems-1){
+            if(current_sort == numItems-1){
                 next = 0;
             }
 
@@ -82,12 +80,11 @@ $(document ).ready(function() {
 
     	function slideLeft(){
             current_sort = $('.slider_content li:first-child').data('sort');
-            prev=  current_sort-1;
-            if(current_sort ==0){
+            prev = current_sort-1;
+            if(current_sort == 0){
                 prev = numItems-1;
             }
             $('.item[data-sort="'+prev+'"]').prependTo('.slider_content');
-
     	}
 
         function goTo(){
@@ -107,14 +104,12 @@ $(document ).ready(function() {
     	});
 
         goTo();
-    }
-
-    
+    }   
 
     setTimeout(function(){
 	    slider();
     	rating();
 
-	    $('.slider_container').removeClass('hidden');
+	    $('.slider_container, .sliderName').removeClass('hidden');
 	},500)
 });
